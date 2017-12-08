@@ -9,7 +9,7 @@ import com.github.pwittchen.reactivesensors.R;
 import com.github.pwittchen.reactivesensors.app.samples.*;
 
 public class MainActivity extends AppCompatActivity {
-
+//tạo ra các sensors
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     findViewAndSetOnClickListener(R.id.b_rotation_vector, RotationVectorActivity.class);
     findViewAndSetOnClickListener(R.id.b_temperature, TemperatureActivity.class);
   }
-
+//chạy các sự kiện của sensors
   private void findViewAndSetOnClickListener(int viewId, final Class<?> cls) {
     findViewById(viewId).setOnClickListener(new View.OnClickListener() {
       @Override public void onClick(View v) {

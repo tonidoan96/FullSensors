@@ -32,7 +32,7 @@ class SensorHelper {
         .filter(ReactiveSensorFilter.filterSensorChanged())
         .subscribe(new Consumer<ReactiveSensorEvent>() {
           @Override public void accept(ReactiveSensorEvent reactiveSensorEvent) throws Exception {
-            SensorEvent event = reactiveSensorEvent.getSensorEvent();
+            SensorEvent event = reactiveSensorEvent.getSensorEvent();//lấyy sự kiện của sensors
 
             float x = event.values[0];
             float y = event.values[1];
